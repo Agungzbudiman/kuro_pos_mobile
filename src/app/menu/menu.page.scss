@@ -1,0 +1,63 @@
+ion-header{
+    height: 60px;
+    text-align: center;
+    padding:2px;
+    img{
+        height: 60px;
+    }
+}
+.title-category{
+    font-family: cursive;
+    text-transform: uppercase;
+}
+.cardContent{
+    -webkit-padding-start: 7px;
+    padding-inline-start: 7px;
+    -webkit-padding-end: 7px;
+    padding-inline-end: 7px;
+    padding-bottom: unset;
+    .box-menu{
+        margin-bottom: 15px;
+        div{
+            position: relative;
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+            p{
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            img{
+                filter: brightness(60%);
+            }
+            .namaMenu{
+                position: absolute;
+                color: white;
+                font-weight: bold;
+                bottom: 0;
+                font-family: serif;
+                text-transform: capitalize;
+            }
+            .stockHabis{
+                position: absolute;
+                top: 25px;
+                border-bottom-left-radius:8px;
+                background: #f04141;
+                color: white;
+                right: 0;
+            }
+            .hargaMenu{
+                position: absolute;
+                top: 0;
+                border-bottom-left-radius:8px;
+                background: #9c28b0;
+                color: white;
+                right: 0;
+            }
+        }
+    }
+    div[class*="col-"]:nth-child(odd){
+        padding-right: 8px;
+    }
+    div[class*="col-"]:nth-child(even){
+        padding-left: 8px;
+    }
+}

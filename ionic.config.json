@@ -1,0 +1,7 @@
+{
+  "name": "tommy_pos2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

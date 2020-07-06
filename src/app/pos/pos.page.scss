@@ -1,0 +1,24 @@
+.item-inner{
+    display: block;
+    slot{
+        font-size: 21px;
+    }
+    .item-inner-highlight{
+        margin-top: 5px;
+    }
+    .calulasi{
+        float: right;
+        margin-top: -20px;
+        ion-input{
+            width: 30px;
+            font-size: 18px;
+            display: inline-block;
+        }
+        button{
+            margin-top: -6px;
+        }
+    }
+}
+.namaMenu{
+    text-transform: capitalize;
+}

@@ -1,0 +1,33 @@
+<ion-content padding>
+    <ion-grid class="logo" style="margin-bottom: unset">
+        <ion-row>
+            <ion-col col-12>
+                <img src="./assets/imgs/logo_2.png">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-list inset class="form">
+        <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input type="text" [(ngModel)]="formData.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="formData.password"></ion-input>
+        </ion-item>
+        <!-- <ion-item class="button-login"> -->
+            <ion-button expand="block" round mode="ios" block (click)="postLogin()">Sign In</ion-button>
+        <!-- </ion-item> -->
+    </ion-list>
+</ion-content>
+
+<ion-footer mode="ios" style="display: none">
+    <ion-toolbar>
+        <ion-buttons end>
+            <button ion-button icon-right color="royal" (click)="openPageForgot()">
+                Lupa password
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

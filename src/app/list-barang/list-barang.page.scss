@@ -1,0 +1,23 @@
+h1,h2,h3,h4,h5,h5{
+    margin-left: 10px;
+}
+.item-native{
+    min-height: 50px;
+    p{
+        margin-left:10px;
+        float: left;
+        font-size: 14px;
+    }
+    .calulasi{
+        float: right;
+        text-align: center;
+        ion-input{
+            width: calc(100px);
+            font-size: 18px;
+            display: inline-block;
+        }
+        ion-button{
+            margin-top: -6px;
+        }
+    }
+}

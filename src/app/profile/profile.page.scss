@@ -1,0 +1,118 @@
+ion-content{
+        margin-top: -40px;
+        background: #FFFFFF; /* For browsers that do not support gradients */
+        // background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
+        // background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
+        // background: -moz-linear-gradient (#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
+        // background: linear-gradient(#FFFFFF, #CCCCCC); /* Standard syntax */
+
+        .avatar-area
+        {
+            z-index: 10;
+            position: relative;
+            display: block;
+            text-align: center;
+            -webkit-box-shadow: none;
+            margin-top: 100px;
+            padding-top: 30px;
+            box-shadow: none;
+            width: 100%;
+            background-color: #9c27b0;
+            border-radius: 0;
+            margin: 0;
+            padding-bottom: 1vw;
+
+            ion-card-content
+            {
+                // padding-top: 1vw !important;
+                text-align: center;
+                img
+                {
+                    width: 30vw;
+                    height: 30vw;
+                    display: inline;
+                    border-radius: 50vw;
+                    border: solid 1vw rgba(255, 255, 255, 0.5);
+                }
+                h3
+                {
+                    font-family: 'pier_sansbold', sans-serif;
+                    color: #FFFFFF;
+                    font-size: 5vw;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                h4
+                {
+                    font-family: 'pier_sanslight', sans-serif;
+                    color: #FFFFFF;
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        .biodata-area
+        {
+            padding-left: 5vw;
+            padding-right: 5vw;
+            /* margin-top: 13vw !important; */
+            font-family: 'pier_sanslight', sans-serif;
+            position: relative;
+            display: block;
+            ion-item
+            {
+                color: #414042 !important;
+            }
+            ion-item h2
+            {
+                font-size: 4vw !important;
+            }
+            .item
+            {
+                padding-left: 0;
+                color: #414042 !important;
+                border-radius: 0 !important;
+                .item-inner
+                {
+                    padding-right: 0;
+                }
+            }
+
+        }
+    }
+
+    ion-footer
+    {
+        .toolbar-background
+        {
+            background-color: transparent;
+        }
+        .button-logout
+        {
+            padding-left: 5vw;
+            padding-right: 5vw;
+            .col
+            {
+                padding: 0;
+            }
+            .button
+            {
+                box-shadow: none;
+                // background-color: #9c27b0;
+                .button-inner
+                {
+                    color: #FFFFFF;
+                    letter-spacing: 0.5vw;
+                    font-family: 'pier_sansregular';
+                    text-transform: uppercase;
+                    font-size: 3.5vw;
+                }
+            }
+        }
+    }
+    .copyright{
+        font-family: 'pier_sanslight', sans-serif;
+        color: #9c27b0;
+        font-size: 3.2vw;
+        text-align: center;
+    }

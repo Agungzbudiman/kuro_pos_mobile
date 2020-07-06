@@ -1,0 +1,159 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+
+ion-header {
+    ion-toolbar{
+        background: #9c27b0;
+        ion-title{
+            background: #9c27b0;
+            color: white;
+            text-align: center;
+            height: 56px;
+            margin-left: -5px;
+        }
+        ion-buttons{
+            background: #9c27b0;
+            color: white;
+            height: 56px;
+            margin-left: 0px;
+        }
+    }
+}
+ion-footer{
+    background-color: #9c27b0;
+    .left{
+        display: inline-block;
+        margin-top: 10px;
+        color: white;
+        font-size: 18px;
+    }
+    .right{
+        float: right;
+        .button-md{
+            background: white;
+            color: #9c27b0;
+        }
+    }
+}
+
+ion-button{
+    --background: #9c27b0;
+    --background-focused : #9c27b0;
+    --background-activated : #9c27b0;
+    --background-hover : #9c27b0;
+}
+p{
+    margin: 5px 0px;
+}
+
+ion-content
+{
+    background: #FFFFFF; /* For browsers that do not support gradients */
+    // background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
+    // background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
+    // background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
+    // background: linear-gradient(#FFFFFF, #CCCCCC); /* Standard syntax */
+
+
+    .item-has-focus .label-floating.sc-ion-label-md-h{
+        color :#9c27b0;
+    }
+
+
+    .logo
+    {
+        margin-top: 11vw;
+        margin-bottom: 6vw;
+        text-align: center;
+        img
+        {
+            width: 98% !important;
+        }
+    }
+}
+
+.textElepsis{
+  white-space: nowrap; 
+  width: 100%; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    float: left;
+}
+.col-12 {
+    width: 100%;
+}
+.col-11 {
+    width: 91.66666667%;
+}
+.col-10 {
+    width: 83.33333333%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-8 {
+    width: 66.66666667%;
+}
+.col-7 {
+    width: 58.33333333%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-5 {
+    width: 41.66666667%;
+}
+.col-4 {
+    width: 33.33333333%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-2 {
+    width: 16.66666667%;
+}
+.col-1 {
+    width: 8.33333333%;
+}

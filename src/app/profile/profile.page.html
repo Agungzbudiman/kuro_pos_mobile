@@ -1,0 +1,34 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-title>Profile Saya</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content no-padding>
+    <ion-card class="avatar-area">
+        <ion-card-content>
+            <img src="./assets/imgs/user.png">
+            <h3>{{data.name}}</h3>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-list class="biodata-area">
+        <!-- <ion-item>
+            <h2 item-start>No Telepon</h2>
+            <h2 item-end>{{data.telpon}}</h2>
+        </ion-item> -->
+    </ion-list>
+
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-grid class="button-logout">
+            <ion-row>
+                <ion-col>
+                    <ion-button color="primary" expand="block" *ngIf="data.userRole =='2'" round (click)="goAvailableMasakan()">Tersedia Semua Menu</ion-button>
+                    <ion-button color="danger" expand="block" round (click)="goLogout()">Keluar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

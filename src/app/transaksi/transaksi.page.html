@@ -1,0 +1,26 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <img src="./assets/imgs/logo.png">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">cari nama (tap in here)</ion-label>
+        <ion-input [(ngModel)]="filter.atasnama"></ion-input>
+        <ion-button size="medium" class="buttonFilter" (click)="removeString()"><ion-icon name="close"></ion-icon></ion-button>
+    </ion-item>
+    <div class="box-seluruh">
+        <div class="col-6 box-menu" *ngFor="let item of items| atasNamaPipe:filter">
+            <div>
+                <h4>{{item.transaksi_atasnama}}</h4>
+                <h6>Rp.{{item.jumlah_total|number:0}}</h6>
+                <small class="status">{{(item.transaksi_status=='0'?'Baru':'Selesai')}}</small>
+                <small class="jam">{{item.transaksi_jam}}</small>
+                <ion-button style="font-size: 10px;" *ngIf="item.transaksi_status=='0'" (click)="updateTransaksi(item)"><ion-icon name="logo-usd"></ion-icon></ion-button>
+                <ion-button style="font-size: 10px;" (click)="openTransaksi(item)"><ion-icon name="open"></ion-icon></ion-button>
+                <ion-button style="font-size: 10px;" href="#" (click)="openPrint(item)"><ion-icon name="print"></ion-icon></ion-button>
+            </div>
+        </div>
+    </div>
+</ion-content>

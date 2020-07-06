@@ -1,0 +1,27 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menu Pesanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let item of itemPesan;let i = index">
+      <div class="row">
+          <div class="col-4">
+              <img [src]="item.gambar" style="height:100px;">
+          </div>
+          <div class="col-8">
+              <div>
+                  <p class="namaMenu">{{item.nama}}</p>
+                  <p>Jumlah : {{item.jumlah}}</p>
+                  <p>Status : {{statusMenu[item.status]}}</p>
+              </div>
+              <ion-button *ngIf="item.status=='1'" (click)="updateMasak(item)"><ion-icon name="flame"></ion-icon></ion-button>
+              <ion-button *ngIf="item.status=='2'" (click)="serveMasak(item)"><ion-icon name="restaurant"></ion-icon></ion-button>
+              <ion-button (click)="detaiMenu(item)"><ion-icon name="open"></ion-icon></ion-button>
+            </div>
+      </div>
+  </ion-card>
+</ion-content>

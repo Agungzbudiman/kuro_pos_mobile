@@ -1,0 +1,24 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-title>Detail Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div style="max-height: 231px;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;" [style.backgroundImage]="'url('+ dataMenu.gambar +')'"></div>
+    <h4 style="text-align: center;text-transform: capitalize;">{{dataMenu.nama}}</h4>
+    <h5>Rp.{{dataMenu.harga|number:0}}</h5>
+    <div class="item-native">
+      <p>Jumlah Pesan : {{dataMenu.jumlah}}</p>
+    </div>
+    <ion-item>
+      <ion-label position="floating">Notes</ion-label>
+      <ion-textarea rows="6" cols="20" placeholder="notes here..." readonly [(ngModel)]="dataMenu.note"></ion-textarea>
+    </ion-item>
+</ion-content>
+<ion-footer mode="ios">
+  <ion-button size="medium" expand="block" (click)="closeModal()">Kembali</ion-button>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Transaksi Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h6 *ngIf="itemPesan?.length > 0" style="padding: 0px 12px;">Total Harga <span style="float: right;">Rp.{{dataTotal.totalDipesan|number:0}}</span>
+  </h6>
+  <ion-card *ngFor="let item of itemPesan;let i = index">
+      <div class="row" (click)="detaiMenu(item)">
+          <div class="col-4">
+              <img [src]="item.gambar" style="height:100px;">
+          </div>
+          <div class="col-8">
+              <div>
+                  <p class="namaMenu">{{item.nama}}</p>
+                  <p>Jumlah : {{item.jumlah}}</p>
+                  <p>Harga : Rp.{{item.jumlah*item.harga|number:0}}</p>
+                  <p *ngIf="item.ready == '0'">Status : {{statusMenu[item.status]}}</p>
+                  <p *ngIf="item.ready == '1'">Status : Maaf Pesanan Sudah Outofstock</p>
+              </div>
+          </div>
+      </div>
+  </ion-card>
+</ion-content>

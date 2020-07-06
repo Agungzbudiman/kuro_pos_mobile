@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-toolbar>
+      <img src="./assets/imgs/logo.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of items">
+      <ion-card-header (click)="expandItem(item)">
+          <ion-card-title class="title-category">{{item.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="cardContent">
+          <app-expand expandHeight="170px" [expanded]="item.expanded">
+          <div class="row">
+                <div class="col-6 box-menu" *ngFor="let menu of item.menu" [hidden]="!((dataUser.userRole != '2' && menu.show == '1')||dataUser.userRole == '2')">
+                    <div (click)="openModal(menu)">
+                        <img [src]="menu.gambar" style="height:100px;">
+                        <p class="textElepsis namaMenu">{{menu.nama}}</p>
+                        <p class="hargaMenu">Rp.{{menu.harga|number:0}}</p>
+                        <p class="stockHabis" *ngIf="menu.show == '0'">Habis</p>
+                    </div>
+                </div>
+          </div>
+          </app-expand>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

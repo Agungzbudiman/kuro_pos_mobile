@@ -1,0 +1,57 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-title>Pesanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h3 *ngIf="items?.length > 0" style="padding-left: 12px;">Akan dipesan 
+      <ion-button size="medium" style="float: right;margin-top: -10px;" (click)="checkout()">
+          Pesan
+      </ion-button>
+  </h3>
+  <h6 *ngIf="items?.length > 0" style="padding: 0px 12px;">Total Harga <span style="float: right;">Rp.{{dataTotal.totalAkan|number:0}}</span>
+  </h6>
+  <h3 *ngIf="items?.length == 0 && itemPesan?.length == 0" style="padding-left: 12px;">Pemesanan Kosong 
+  </h3>
+  <ion-card *ngFor="let item of items;let i = index">
+      <div class="row">
+          <div class="col-4">
+              <img [src]="item.gambar" style="height:100px;">
+          </div>
+          <div class="col-8">
+              <div>
+                  <p class="namaMenu">{{item.nama}}</p>
+                  <p>Jumlah : {{item.jumlah}}</p>
+                  <p>Harga : Rp.{{item.jumlah*item.harga|number:0}}</p>
+              </div>
+              <ion-button size="medium" (click)="openModal(item)" style="position: absolute;right: 10px;bottom: 30px;">
+                  <ion-icon name="more"></ion-icon>
+              </ion-button>
+              <ion-button size="medium" (click)="remove(i)" style="position: absolute;right: 10px;bottom: -35px;">
+                  <ion-icon name="trash"></ion-icon>
+              </ion-button>
+              
+          </div>
+      </div>
+  </ion-card>
+  <h3 *ngIf="itemPesan?.length > 0" style="padding-left: 12px;">Pesanan
+  </h3>
+  <h6 *ngIf="itemPesan?.length > 0" style="padding: 0px 12px;">Total Harga <span style="float: right;">Rp.{{dataTotal.totalDipesan|number:0}}</span>
+  </h6>
+  <ion-card *ngFor="let item of itemPesan;let i = index">
+      <div class="row">
+          <div class="col-4">
+              <img [src]="item.gambar" style="height:100px;">
+          </div>
+          <div class="col-8">
+              <div>
+                  <p class="namaMenu">{{item.nama}}</p>
+                  <p>Jumlah : {{item.jumlah}}</p>
+                  <p>Harga : Rp.{{item.jumlah*item.harga|number:0}}</p>
+                  <p *ngIf="item.ready == '0'">Status : {{statusMenu[item.status]}}</p>
+                  <p *ngIf="item.ready == '1'">Status : Maaf Pesanan Sudah Outofstock</p>
+              </div>
+          </div>
+      </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header mode="ios">
+    <ion-toolbar>
+        <ion-title>Checkout</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div style="padding: 10px;">
+        <h3 style="text-align: center">Detail Pembelian</h3>
+        <div class="detail-pembayaran">
+            <div class="total">
+                <div class="left">Total</div>
+                <div class="right">Rp.{{totalBayar|number:0}}</div>
+            </div>
+            <div class="total">
+                <div class="left">Atas Nama</div>
+                <div class="right"><ion-input style="text-align: right" type="text" [(ngModel)]="formData.atas_nama"></ion-input></div>
+            </div>
+            <div class="total">
+                <div class="left">Ppn</div>
+                <div class="right">
+                    <ion-checkbox slot="end" [(ngModel)]="formData.ppn" (click)="jumlahTotal()"></ion-checkbox>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer mode="ios">
+    <ion-button size="medium" expand="block" (click)="pesanSekarang()">Pesan Sekarang</ion-button>
+    <ion-button size="medium" expand="block" (click)="closeModal()">Kembali</ion-button>
+</ion-footer>  
